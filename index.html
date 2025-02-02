@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>みゆき美容室</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fffaf0;
+        }
+        header {
+            background: url('hair-salon-529917_640.jpg') center/cover;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #d67c8e;
+            padding: 15px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #b65b75;
+        }
+        main {
+            padding: 40px 20px;
+        }
+        .content-section {
+            margin-bottom: 40px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+        }
+        .fade {
+            animation: fadeEffect 2s;
+        }
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        details {
+            background: #f4c2c2;
+            padding: 10px;
+            border-radius: 5px;
+            color: black;
+            margin: 10px auto;
+            max-width: 600px;
+        }
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let slideIndex = 0;
+            function showSlides() {
+                let slides = document.getElementsByClassName("slides");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1; }
+                slides[slideIndex - 1].style.display = "block";
+                slides[slideIndex - 1].classList.add("fade");
+                setTimeout(showSlides, 3000);
+            }
+            showSlides();
+        });
+    </script>
+</head>
+<body>
+    <header>みゆき美容室</header>
+    <nav>
+        <a href="#home">ホーム</a>
+        <a href="#menu">メニュー</a>
+        <a href="#store-info">店舗情報</a>
+        <a href="#faq">よくあるご質問</a>
+    </nav>
+    <main>
+        <div class="slideshow-container">
+            <img class="slides" src="hair-salon-529917_640.jpg" alt="サロンの写真">
+            <img class="slides" src="hair-5473077_640.jpg" alt="ヘアセット">
+            <img class="slides" src="hair-5473078_640.jpg" alt="ヘアスタイリング">
+            <img class="slides" src="haircut-834280_640.jpg" alt="ヘアカット">
+            <img class="slides" src="hair-stylist-1514894_640.jpg" alt="美容室ツール">
+        </div>
+        <section id="home" class="content-section">
+            <h2>お知らせ</h2>
+            <details>
+                <summary>ホームページ作成のお知らせ (2025/02/02)</summary>
+                <p>いつもみゆき美容室をご利用いただき、誠にありがとうございます。<br>
+                このたび、より多くの皆様にご利用していただけるように、<br>
+                ホームページの作成を行いました。<br>
+                わかりやすく最新の情報を掲載するホームページを目指しますので、<br>
+                今後ともどうぞよろしくお願い申し上げます。</p>
+            </details>
+        </section>
+        <section id="menu" class="content-section">
+            <h2>メニュー</h2>
+            <table>
+                <tr><th>メニュー</th><th>料金（税抜）</th></tr>
+                <tr><td>大人カット</td><td>¥3,500</td></tr>
+                <tr><td>子供カット</td><td>¥1,500</td></tr>
+                <tr><td>パーマ</td><td>¥8,000~¥9,000</td></tr>
+                <tr><td>カラー</td><td>¥4,000</td></tr>
+            </table>
+        </section>
+        <section id="store-info" class="content-section">
+            <h2>店舗情報</h2>
+            <p><strong>住所：</strong>〒245-0018 神奈川県横浜市泉区上飯田町1959-1</p>
+            <p><strong>アクセス：</strong>相鉄線いずみ中央駅出口から徒歩16分</p>
+            <p><strong>電話番号：</strong>045-802-2816</p>
+            <p><strong>営業時間：</strong>AM9:00~PM16:00</p>
+            <p><strong>定休日：</strong>毎週火曜日、第2第3月曜日</p>
+        </section>
+ 　　　 <iframe src="https://www.google.com/maps?q=神奈川県横浜市泉区上飯田町1959-1&output=embed" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <section id="faq" class="content-section">
+            <h2>よくあるご質問(FAQ)</h2>
+            <details>
+                <summary>Q. 決済可能な支払い方法を教えてください</summary>
+                <p>A．お支払いは現金のみとなっております。</p>
+            </details>
+            <details>
+                <summary>Q. 定休日はありますか？</summary>
+                <p>A．定休日は毎週火曜日と毎月第2第3月曜日です。</p>
+            </details>
+            <details>
+                <summary>Q. 予約することは出来ますか？</summary>
+                <p>A．当店では予約を承っておりません。お並びのお客様から順番に対応します。</p>
+            </details>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 みゆき美容室. All Rights Reserved.
+    </footer>
+</body>
+</html>
